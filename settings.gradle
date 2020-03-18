@@ -1,0 +1,2 @@
+rootProject.name='Dispatch Project'
+include ':app'
