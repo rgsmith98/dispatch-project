@@ -8,4 +8,6 @@
     <color name="splashBackgroundEndColor">#d7f3f8</color>
     <color name="splashFontBackColor">#98ca48</color>
     <color name="splashFontColor">#FFFFFF</color>
+
+    <color name="loginButtonColor">#9eca47</color>
 </resources>
