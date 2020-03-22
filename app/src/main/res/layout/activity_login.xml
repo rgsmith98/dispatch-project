@@ -13,11 +13,11 @@
         android:paddingRight="40dp">
 
         <ImageView
-            android:layout_width="300sp"
-            android:layout_height="200sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@mipmap/new_logo"
             android:layout_gravity="center"
-            android:paddingTop="65sp"/>
+            android:paddingTop="10sp"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -61,7 +61,9 @@
             android:id="@+id/button"
             android:background="@drawable/round_button"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/application_font"/>
+            android:fontFamily="@font/application_font"
+            android:textColor="#FFF"
+            android:textSize="18sp"/>
 
 
         <LinearLayout

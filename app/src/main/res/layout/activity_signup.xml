@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="@drawable/splash_background"
     tools:context=".SignupActivity">
@@ -16,7 +16,13 @@
         android:paddingLeft="40sp"
         android:paddingRight="40sp">
 
-
+        <ImageView
+            android:id="@+id/signuplogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/new_logo"
+            tools:ignore="MissingConstraints"
+            android:paddingTop="10sp"/>
 
         <TextView
             android:id="@+id/signupText"
@@ -26,38 +32,139 @@
             android:fontFamily="@font/application_font"
             android:textSize="22sp"
             android:textColor="#000"
-            android:paddingTop="40sp"
+            android:paddingTop="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toBottomOf="@id/signuplogo"/>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/accountTypelayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/signupText"
-            android:hint="Select Account Type"
-            android:textColorHint="#000"
-            android:layout_marginTop="50sp">
+            android:layout_marginTop="30sp">
 
-            <com.google.android.material.textview.MaterialTextView
+            <!--<com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Select Account Type: "
                 android:textColor="#000"
                 android:fontFamily="@font/application_font"
-                android:textSize="20sp"/>
+                android:textSize="20sp"/>-->
 
             <Spinner
                 android:id="@+id/registerType"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:popupBackground="#FFF"/>
+                android:popupBackground="#FFF"
+                android:background="@drawable/spinner_background"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usernamelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/accountTypelayout"
+            android:layout_marginTop="15sp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/usernameInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:fontFamily="@font/application_font"
+                android:hint="Enter Username: "
+                android:textColorHint="#000"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:inputType="text"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emaillayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/usernamelayout"
+            android:layout_marginTop="15sp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:fontFamily="@font/application_font"
+                android:hint="Enter Email: "
+                android:textColorHint="#000"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emaillayout"
+            android:layout_marginTop="15sp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:fontFamily="@font/application_font"
+                android:hint="Enter Password: "
+                android:textColorHint="#000"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/registerButtonlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passwordlayout"
+            android:layout_marginTop="15sp">
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Register"
+                android:background="@drawable/round_button"
+                android:fontFamily="@font/application_font"
+                android:textColor="#FFF"
+                android:textSize="18sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
