@@ -9,6 +9,7 @@
 
         <item name="android:textColorHint">#000</item>
     </style>
+
     
     <!-- Splash Screen , Login Screen & Register Screen Theme -->
     <style name="AppTheme.Splash" parent="@style/Theme.AppCompat.NoActionBar">

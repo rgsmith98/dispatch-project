@@ -22,7 +22,9 @@
             android:layout_height="wrap_content"
             android:src="@mipmap/new_logo"
             tools:ignore="MissingConstraints"
-            android:paddingTop="10sp"/>
+            android:paddingTop="10sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
 
         <TextView
             android:id="@+id/signupText"

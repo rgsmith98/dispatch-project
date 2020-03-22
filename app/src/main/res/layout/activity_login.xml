@@ -29,11 +29,11 @@
             android:fontFamily="@font/application_font"
             android:layout_marginTop="50sp"
             android:textColor="#000"
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:paddingLeft="0dp"
             android:drawablePadding="10sp"
             android:textColorHint="#000"
-            android:backgroundTint="@android:color/holo_green_dark"/>
+            android:backgroundTint="@android:color/holo_blue_dark"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -45,11 +45,11 @@
             android:fontFamily="@font/application_font"
             android:layout_marginTop="20sp"
             android:textColor="#000"
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:paddingLeft="0dp"
             android:drawablePadding="10sp"
             android:textColorHint="#000"
-            android:backgroundTint="@android:color/holo_green_dark"/>
+            android:backgroundTint="@android:color/holo_blue_dark"/>
 
 
         <Button
