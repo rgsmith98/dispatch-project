@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(signUpIntent);
                         overridePendingTransition(R.anim.slide_out_bottom, R.anim.slide_in_bottom);
                     }
-                }, 100);
+                }, 50);
             }
         });
 
@@ -61,9 +61,9 @@ public class LoginActivity extends AppCompatActivity {
                         etusername.setError("Username is Required");
                         etusername.setFocusable(true);
                     }
-
-                    if(passwordval.equals("")){
+                    else if(passwordval.equals("")){
                         etpassword.setError("Password is Required");
+                        etpassword.setFocusable(true);
                     }
                 }else{
                     Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Login Button Click", Snackbar.LENGTH_LONG).setActionTextColor(Color.RED);

@@ -1,6 +1,7 @@
 package com.example.dispatchproject;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.text.Editable;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.Spinner;
@@ -18,19 +20,34 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class SignupActivity extends AppCompatActivity {
 
     //Account Type Spinner
     Spinner accountType;
-    EditText emailAddress;
+
+    //All Input Fields
+    EditText etusername;
+    EditText etemail;
+    EditText etpassword;
+
     Context context = this;
 
+    Button btnRegister;
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+
+        btnRegister = findViewById(R.id.btnRegister);
+
+        //Initialize all Input Fields
+        etusername = findViewById(R.id.usernameInput);
+        etemail = findViewById(R.id.emailInput);
+        etpassword = findViewById(R.id.passwordInput);
 
         /**
          => Initialize Account Type Spinner and Set Data into it
@@ -59,14 +76,50 @@ public class SignupActivity extends AppCompatActivity {
 
 
 
-        /**
-            => Initialize Email Address Field
-         ------------------------------------------------
-        **/
-                emailAddress = findViewById(R.id.emailInput);
-        /**
-         ------------------------------------------------
-        **/
+
+
+
+
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //SetValidation
+                String spaccountTypeVal = accountType.getSelectedItem().toString();
+                String etusernameval = etusername.getText().toString().trim();
+                String etemailval = etemail.getText().toString().trim();
+                String etpasswordval = etpassword.getText().toString().trim();
+
+                if(spaccountTypeVal.equals("Select Account Type") || etusernameval.equals("") || etemailval.equals("") || etpasswordval.equals(""))
+                {
+                    if(spaccountTypeVal.equals("Select Account Type"))
+                    {
+                        accountType.setFocusable(true);
+                        Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Account Type is Required", Snackbar.LENGTH_LONG).setActionTextColor(Color.RED);
+                        snackbar.show();
+                    }
+                    if(etusernameval.equals(""))
+                    {
+                        etusername.setError("Username is Required");
+                        etusername.setFocusable(true);
+                    }
+                    if(etemailval.equals(""))
+                    {
+                        etemail.setError("Email is Required");
+                        etemail.setFocusable(true);
+                    }
+                    if(etpasswordval.equals(""))
+                    {
+                        etpassword.setError("Password is Required");
+                        etpassword.setFocusable(true);
+                    }
+                }
+                else
+                {
+                    Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Register Successfully", Snackbar.LENGTH_LONG).setActionTextColor(Color.GREEN);
+                    snackbar.show();
+                }
+            }
+        });
     }
 
 
