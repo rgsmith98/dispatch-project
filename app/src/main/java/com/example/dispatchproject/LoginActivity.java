@@ -66,6 +66,9 @@ public class LoginActivity extends AppCompatActivity {
                         etpassword.setFocusable(true);
                     }
                 }else{
+                    Intent LoginIntent = new Intent(LoginActivity.this, DashboardActivity.class);
+                    startActivity(LoginIntent);
+                    overridePendingTransition(R.anim.slide_out_bottom, R.anim.slide_in_bottom);
                     Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Login Button Click", Snackbar.LENGTH_LONG).setActionTextColor(Color.RED);
                     snackbar.show();
                 }

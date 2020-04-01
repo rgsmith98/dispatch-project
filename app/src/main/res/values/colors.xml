@@ -9,5 +9,8 @@
     <color name="splashFontBackColor">#98ca48</color>
     <color name="splashFontColor">#FFFFFF</color>
 
+    <color name="themeBackgroundStartColor">#98cd38</color>
+    <color name="themeBackgroundEndColor">#efefc6</color>
+
     <color name="loginButtonColor">#9eca47</color>
 </resources>
