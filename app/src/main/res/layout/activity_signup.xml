@@ -58,12 +58,23 @@
                 android:fontFamily="@font/application_font"
                 android:textSize="20sp"/>-->
 
-            <Spinner
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/registerType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Select Account Type"
+                android:textColorHint="#CFD8DC"
+                android:gravity="left"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:popupBackground="#FFF"
+                android:fontFamily="@font/application_font"/>
+
+            <!--<Spinner
                 android:id="@+id/registerType"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:popupBackground="#FFF"
-                android:background="@drawable/spinner_background"/>
+                android:background="@drawable/spinner_background"/>-->
 
         </com.google.android.material.textfield.TextInputLayout>
 

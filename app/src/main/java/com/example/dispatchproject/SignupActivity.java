@@ -21,11 +21,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 
 public class SignupActivity extends AppCompatActivity {
 
     //Account Type Spinner
-    Spinner accountType;
+    //Spinner accountType;
+    MaterialBetterSpinner accountType;
 
     //All Input Fields
     EditText etusername;
@@ -54,7 +56,8 @@ public class SignupActivity extends AppCompatActivity {
          --------------------------------------------------------
         **/
 
-                accountType = findViewById(R.id.registerType);
+               //accountType = findViewById(R.id.registerType);
+                accountType = (MaterialBetterSpinner) findViewById(R.id.registerType);
 
                 accountType.setFocusable(true);
                 accountType.setFocusableInTouchMode(true);
@@ -84,7 +87,7 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //SetValidation
-                String spaccountTypeVal = accountType.getSelectedItem().toString();
+                String spaccountTypeVal = accountType.getText().toString().trim();
                 String etusernameval = etusername.getText().toString().trim();
                 String etemailval = etemail.getText().toString().trim();
                 String etpasswordval = etpassword.getText().toString().trim();

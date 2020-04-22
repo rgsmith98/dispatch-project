@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/order_list_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tbl_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Customer Order Request List"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:fontFamily="@font/application_font"
+        android:textStyle="bold"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"/>
+
+    <ScrollView
+        android:id="@+id/order_list_scroll"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:scrollbars="horizontal|vertical"
+        android:scrollbarStyle="outsideOverlay"
+        android:fillViewport="true"
+        android:layout_below="@id/tbl_heading">
+
+        <HorizontalScrollView
+            android:id="@+id/order_list_horizontal_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp">
+
+            <TableLayout
+                android:id="@+id/order_list_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addProductButtonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10sp"
+        android:layout_below="@id/order_list_scroll">
+
+        <Button
+            android:id="@+id/btnAddProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:text="Send Report"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp"
+            android:background="@drawable/round_button"
+            android:fontFamily="@font/application_font"
+            android:textColor="#FFF"
+            android:textSize="15sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>

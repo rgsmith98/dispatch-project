@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerOrderActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer Order Request"
+            android:layout_marginTop="15sp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="@font/application_font"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:textStyle="bold|normal"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/customer_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="#DCDCDC"
+                android:layout_marginBottom="15sp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5sp"
+                    android:paddingBottom="5sp"
+                    android:paddingRight="5sp">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/customer_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Customer Name"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/application_font"
+                        android:textColorHint="#000"
+                        android:backgroundTint="@android:color/holo_blue_dark"
+                        android:inputType="text"
+                        android:drawableLeft="@drawable/customer_name"
+                        android:drawablePadding="10sp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/customer_product_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_below="@id/customer_name_layout"
+                app:cardBackgroundColor="#DCDCDC"
+                android:layout_marginBottom="15sp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5sp"
+                    android:paddingBottom="5sp"
+                    android:paddingRight="5sp">
+
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/customer_product_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/customer_product"
+                        android:hint="Search Product"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/application_font"
+                        android:textColorHint="#000"
+                        android:backgroundTint="@android:color/holo_blue_dark"
+                        android:drawablePadding="10sp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/customer_available_stock_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_below="@id/customer_product_layout"
+                app:cardBackgroundColor="#DCDCDC"
+                android:layout_marginBottom="15sp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5sp"
+                    android:paddingBottom="5sp"
+                    android:paddingRight="5sp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/customer_available_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Available Stock"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/application_font"
+                        android:textColorHint="#000"
+                        android:backgroundTint="@android:color/holo_blue_dark"
+                        android:inputType="text"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/customer_stock"
+                        android:drawablePadding="10sp"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/customer_order_stock_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_below="@id/customer_available_stock_layout"
+                app:cardBackgroundColor="#DCDCDC"
+                android:layout_marginBottom="15sp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5sp"
+                    android:paddingBottom="5sp"
+                    android:paddingRight="5sp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/customer_order_stock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Order Quantity"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/application_font"
+                        android:textColorHint="#000"
+                        android:backgroundTint="@android:color/holo_blue_dark"
+                        android:inputType="text"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/order_quantity"
+                        android:drawablePadding="10sp"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/customer_order_date_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_below="@id/customer_order_stock_layout"
+                app:cardBackgroundColor="#DCDCDC"
+                android:layout_marginBottom="15sp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5sp"
+                    android:paddingBottom="5sp"
+                    android:paddingRight="5sp">
+
+
+
+
+                    <!--<com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/customer_order_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Order Quantity"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/application_font"
+                        android:textColorHint="#000"
+                        android:backgroundTint="@android:color/holo_blue_dark"
+                        android:inputType="text"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/order_quantity"
+                        android:drawablePadding="10sp"/>-->
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
